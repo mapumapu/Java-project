@@ -46,6 +46,7 @@ public class sortingNumber {
                     selectionSort(numbers, false);
                     break;
                 case "6":
+                    System.out.println("Menutup aplikasi...");
                     break label;
                 default:
                     System.out.println("Input salah");
