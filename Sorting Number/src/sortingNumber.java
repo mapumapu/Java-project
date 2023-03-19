@@ -3,8 +3,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class sortingNumber {
-
-    // Global variable
     public static int[] numbers = new int[5];
 
     public static Scanner input = new Scanner(System.in);
@@ -30,19 +28,15 @@ public class sortingNumber {
                     inputData();
                     break;
                 case "2":
-//                    bubbleSortAscending(numbers);
                     bubbleSort(numbers, true);
                     break;
                 case "3":
-//                    bubbleSortDescending(numbers);
                     bubbleSort(numbers, false);
                     break;
                 case "4":
-//                    selectionSortAscending(numbers);
                     selectionSort(numbers, true);
                     break;
                 case "5":
-//                    selectionSortDescending(numbers);
                     selectionSort(numbers, false);
                     break;
                 case "6":
@@ -104,109 +98,6 @@ public class sortingNumber {
         System.out.println(stringArray(numbers));
         System.out.println("######################");
     }
-
-//    public static void bubbleSortAscending(int[] numbers) {
-//        if(allZero(numbers)) {
-//            System.out.println("Sebelum diurutkan : " + stringArray(numbers));
-//            int n = numbers.length;
-//            for (int i = 0; i < n - 1; i++) {
-//                for (int j = 0; j < n - i - 1; j++) {
-//                    System.out.println("Membandingkan angka " + numbers[j]+ " di index "+ j + " dengan angka " + numbers[j + 1] + " di index " + (j + 1) );
-//                    if (numbers[j] > numbers[j + 1]) {
-//                        int temp = numbers[j];
-//                        numbers[j] = numbers[j + 1];
-//                        numbers[j + 1] = temp;
-//                        System.out.println("Menukar angka " + numbers[j]+ " di index "+ (j + 1) + " dengan angka " + numbers[j + 1] + " di index " + j );
-//                        System.out.println("Hasil Pengurutan Sementara: " + stringArray(numbers));
-//                    }
-//                }
-//            }
-//            System.out.println("Hasil akhir Bubble Sort Ascending: " + stringArray(numbers));
-//
-//        } else {
-//            System.out.println("Generate Random Data terlebih dahulu!");
-//            daftarMenu();
-//        }
-//
-//    }
-//
-//    public static void bubbleSortDescending(int[] numbers) {
-//        if(allZero(numbers)) {
-//            System.out.println("Sebelum diurutkan : " + stringArray(numbers));
-//            int n = numbers.length;
-//            for (int i = 0; i < n - 1; i++) {
-//                for (int j = 0; j < n - i - 1; j++) {
-//                    System.out.println("Membandingkan angka " + numbers[j]+ " di index "+ j + " dengan angka " + numbers[j + 1] + " di index " + (j + 1) );
-//                    if (numbers[j] < numbers[j + 1]) {
-//                        int temp = numbers[j];
-//                        numbers[j] = numbers[j + 1];
-//                        numbers[j + 1] = temp;
-//                        System.out.println("Menukar angka " + numbers[j]+ " di index "+ (j + 1) + " dengan angka " + numbers[j + 1] + " di index " + j );
-//                        System.out.println("Hasil Pengurutan Sementara: " + stringArray(numbers));
-//                    }
-//                }
-//            }
-//            System.out.println("Hasil akhir Bubble Sort Descending: " + stringArray(numbers));
-//        }
-//        else {
-//            System.out.println("Generate Random Data terlebih dahulu!");
-//            daftarMenu();
-//        }
-//    }
-
-//    public static void selectionSortAscending(int[] numbers) {
-//
-//        if(allZero(numbers)) {
-//            System.out.println("Sebelum diurutkan : " + stringArray(numbers));
-//            int n = numbers.length;
-//            for (int i = 0; i < n - 1; i++) {
-//                int minIndex = i;
-//                for (int j = i + 1; j < n; j++) {
-//                    System.out.println("Membandingkan angka " + numbers[j]+ " di index "+ j + " dengan angka " + numbers[minIndex] + " di index " + minIndex);
-//                    if (numbers[j] < numbers[minIndex]) {
-//                        minIndex = j;
-//                    }
-//                }
-//                System.out.println("Menukar angka " + numbers[minIndex] + " di index "+ minIndex + " dengan angka " + numbers[i] + " di index " + i);
-//                int temp = numbers[minIndex];
-//                numbers[minIndex] = numbers[i];
-//                numbers[i] = temp;
-//                System.out.println("Hasil Pengurutan Sementara: " + stringArray(numbers));
-//            }
-//            System.out.println("Hasil akhir Selection Sort Ascending: "+ stringArray(numbers));
-//        }
-//        else {
-//            System.out.println("Generate Random Data terlebih dahulu!");
-//            daftarMenu();
-//        }
-//    }
-//
-//    public static void selectionSortDescending(int[] numbers) {
-//
-//        if(allZero(numbers)) {
-//            System.out.println("Sebelum diurutkan : " + stringArray(numbers));
-//            int n = numbers.length;
-//            for (int i = 0; i < n - 1; i++) {
-//                int maxIndex = i;
-//                for (int j = i + 1; j < n; j++) {
-//                    System.out.println("Membandingkan angka " + numbers[j]+ " di index "+ j + " dengan angka " + numbers[maxIndex] + " di index " + maxIndex);
-//                    if (numbers[j] > numbers[maxIndex]) {
-//                        maxIndex = j;
-//                    }
-//                }
-//                System.out.println("Menukar angka " + numbers[maxIndex] + " di index "+ maxIndex + " dengan angka " + numbers[i] + " di index " + i);
-//                int temp = numbers[maxIndex];
-//                numbers[maxIndex] = numbers[i];
-//                numbers[i] = temp;
-//                System.out.println("Hasil Pengurutan Sementara: " + stringArray(numbers));
-//            }
-//            System.out.println("Hasil akhir Selection Sort Descending: "+ stringArray(numbers));
-//        }
-//        else {
-//            System.out.println("Generate Random Data terlebih dahulu!");
-//            daftarMenu();
-//        }
-//    }
 
     public static void bubbleSort(int[] array, boolean ascending) {
         if(allZero(numbers)) {
